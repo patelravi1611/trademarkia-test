@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    tty: true
+    working_dir: /app
+    command: >
+      sh -c "yarn install &&
+             yarn dev"
+    container_name: test_front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+    ports:
+      - '15000:3000'
+    networks:
+      - test
+networks:
+  test:
+    name: test

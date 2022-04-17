@@ -1,0 +1,65 @@
+html,
+body {
+  overscroll-behavior: none;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+a,
+.a {
+  cursor: pointer;
+  color: var(--color-black);
+  text-decoration: none;
+  // text-underline-position: under;
+  @include standard-easing();
+}
+.white {
+  color: var(--color-white);
+}
+.black {
+  color: var(--color-black);
+}
+.n-900 {
+  color: var(--color-n-900);
+}
+.n-300 {
+  color: var(--color-n-300);
+}
+.n-200 {
+  color: var(--color-n-200);
+}
+.n-100 {
+  color: var(--color-n-100);
+}
+.n-50 {
+  color: var(--color-n-50);
+}
+.bg-red {
+  background-color:var(--color-red);
+}
+.bg-green {
+  background-color:var(--color-green);
+}
+.red {
+  color:var(--color-red);
+}
+.green {
+  color:var(--color-green);
+}
+.text-center {
+  text-align: center;
+}
+.border-100 {
+  border-radius: 100%;
+}
+.underline {
+  text-decoration: underline;
+}
+.font-italics {
+  font-style: italic;
+}
+.mob-text-initial {
+  @include mob {
+    text-align: initial;
+  }
+}

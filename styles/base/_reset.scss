@@ -1,0 +1,109 @@
+* {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: var(--color-brown);
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: var(--color-n-900);
+  overscroll-behavior: none;
+  font-family: var(--font-family);
+}
+html {
+  scroll-behavior: smooth !important;
+}
+
+footer,
+header,
+nav,
+section,
+main,
+caption {
+  display: block;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  padding-inline-start: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+nav {
+  list-style: none;
+}

@@ -1,0 +1,438 @@
+:root {
+  --space-default: 1rem;
+  --space-df: 1rem;
+  --space-xxxs: calc(0.125 * var(--space-default)); // 2px
+  --space-xxs: calc(0.25 * var(--space-default)); // 4px
+  --space-xs: calc(0.5 * var(--space-default)); // 8px
+  --space-sm: calc(0.75 * var(--space-default)); // 12px
+  --space-md: calc(1.5 * var(--space-default)); // 24px
+  --space-lg: calc(2 * var(--space-default)); // 32px
+  --space-xl: calc(3 * var(--space-default)); // 48px
+  --space-2xl: calc(3.5 * var(--space-default)); // 56px
+  --space-3xl: calc(4 * var(--space-default)); // 64px
+  --space-4xl: calc(4.5 * var(--space-default)); // 72px
+}
+@include lg {
+  :root {
+    --space-default: 0.8rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  &---col {
+    grid-auto-flow: column;
+  }
+  &---textcenter {
+    text-align: center;
+  }
+  &---row {
+    grid-auto-flow: row;
+  }
+  &---space-between {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &---v-space-between {
+    width: 100%;
+    align-content: space-between;
+    align-items: center;
+  }
+
+  // justify content
+  &---h-center {
+    justify-content: center;
+  }
+  &---h-end {
+    justify-content: end;
+  }
+  &---h-start {
+    justify-content: start;
+  }
+  &---h-initial {
+    justify-content: initial;
+  }
+
+  // align items
+  &---v-center {
+    align-items: center;
+  }
+  &---v-end {
+    align-items: end;
+  }
+  &---v-start {
+    align-items: start;
+  }
+  &---v-initial {
+    align-items: initial;
+  }
+
+  // place content/items
+  &---center {
+    place-content: center;
+    place-items: center;
+  }
+  &---start {
+    place-content: start;
+    place-items: start;
+  }
+  &---end {
+    place-content: end;
+    place-items: end;
+  }
+  &---initial {
+    place-content: initial;
+    place-items: initial;
+  }
+
+  // place content
+  &---content-center {
+    place-content: center;
+  }
+  &---content-start {
+    place-content: start;
+  }
+  &---content-end {
+    place-content: end;
+  }
+  &---content-initial {
+    place-content: initial;
+  }
+
+  // place items
+  &---item-center {
+    place-items: center;
+  }
+  &---item-start {
+    place-items: start;
+  }
+  &---item-end {
+    place-items: end;
+  }
+  &---item-initial {
+    place-items: initial;
+  }
+
+  // align content
+  &---acontent-center {
+    align-content: center;
+  }
+  &---acontent-start {
+    align-content: start;
+  }
+  &---acontent-end {
+    align-content: end;
+  }
+  &---acontent-initial {
+    align-content: initial;
+  }
+  &---acontent-space-between {
+    align-content: space-between;
+  }
+
+  &---col-1fr {
+    grid-auto-columns: 1fr;
+  }
+  &---col-auto {
+    grid-auto-columns: auto;
+  }
+  &---col-initial {
+    grid-auto-columns: initial;
+  }
+  &---flow-initial {
+    grid-auto-flow: initial;
+  }
+  &---auto-row-max {
+    grid-auto-rows: max-content;
+  }
+  &---mob-col {
+    @include mob {
+      grid-auto-flow: column;
+    }
+  }
+  // place content/items (mob)
+  &---mob-start {
+    @include mob {
+      place-content: start;
+      place-items: start;
+    }
+  }
+  &---mob-end {
+    @include mob {
+      place-content: end;
+      place-items: end;
+    }
+  }
+  &---mob-center {
+    @include mob {
+      place-content: center;
+      place-items: center;
+    }
+  }
+  &---mob-initial {
+    @include mob {
+      place-content: initial;
+      place-items: initial;
+    }
+  }
+  &---mob-row {
+    @include mob {
+      grid-auto-flow: row;
+    }
+  }
+
+  // justify content (mob)
+  &---mob-h-end {
+    @include mob {
+      justify-content: end;
+    }
+  }
+  &---mob-h-start {
+    @include mob {
+      justify-content: start;
+    }
+  }
+  &---mob-h-center {
+    @include mob {
+      justify-content: center;
+    }
+  }
+  &---mob-h-initial {
+    @include mob {
+      justify-content: initial;
+    }
+  }
+  // align content
+  &---mob-acontent-initial {
+    @include mob {
+      align-content: initial;
+    }
+  }
+  &---mob-acontent-start {
+    @include mob {
+      align-content: flex-start;
+    }
+  }
+  // align items (mob)
+  &---mob-v-center {
+    @include mob {
+      align-items: center;
+    }
+  }
+  &---mob-v-end {
+    @include mob {
+      align-items: end;
+    }
+  }
+  &---mob-v-start {
+    @include mob {
+      align-items: start;
+    }
+  }
+  &---mob-v-initial {
+    @include mob {
+      align-items: initial;
+    }
+  }
+
+  // place content (mob)
+  &---mob-content-center {
+    @include mob {
+      place-content: center;
+    }
+  }
+  &---mob-content-start {
+    @include mob {
+      place-content: start;
+    }
+  }
+  &---mob-content-initial {
+    @include mob {
+      place-content: initial;
+    }
+  }
+  &---mob-content-end {
+    @include mob {
+      place-content: end;
+    }
+  }
+
+  &---mob-content-space-around {
+    @include mob {
+      place-content: space-around;
+    }
+  }
+
+  // place items (mob)
+  &---mob-item-initial {
+    @include mob {
+      place-items: initial;
+    }
+  }
+  &---mob-item-center {
+    @include mob {
+      place-items: center;
+    }
+  }
+  &---mob-item-start {
+    @include mob {
+      place-items: start;
+    }
+  }
+  &---mob-item-end {
+    @include mob {
+      place-items: end;
+    }
+  }
+
+  &---mob-textcenter {
+    @include mob {
+      text-align: center;
+    }
+  }
+  &---mob-space-between {
+    @include mob {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &---mob-space-evenly {
+    @include mob {
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  &---mob-between-initial {
+    @include mob {
+      width: 100%;
+      justify-content: initial;
+      align-items: center;
+    }
+  }
+  
+
+  // place content/items (lg)
+  &---lg-initial {
+    @include lg {
+      place-content: initial;
+      place-items: initial;
+    }
+  }
+  &---lg-start {
+    @include lg {
+      place-content: start;
+      place-items: start;
+    }
+  }
+  &---lg-end {
+    @include lg {
+      place-content: end;
+      place-items: end;
+    }
+  }
+  &---lg-row {
+    @include lg {
+      grid-auto-flow: row;
+    }
+  }
+
+  // justify content (lg)
+  &---lg-h-end {
+    @include lg {
+      justify-content: end;
+    }
+  }
+  &---lg-h-start {
+    @include lg {
+      justify-content: start;
+    }
+  }
+
+  // align items (lg)
+  &---lg-v-center {
+    @include lg {
+      align-items: center;
+    }
+  }
+  &---lg-v-end {
+    @include lg {
+      align-items: end;
+    }
+  }
+  &---lg-v-start {
+    @include lg {
+      align-items: start;
+    }
+  }
+
+  // place content (lg)
+  &---lg-content-center {
+    @include lg {
+      place-content: center;
+    }
+  }
+  &---lg-content-start {
+    @include lg {
+      place-content: start;
+    }
+  }
+  &---lg-content-end {
+    @include lg {
+      place-content: end;
+    }
+  }
+
+  // place items (lg)
+  &---lg-item-center {
+    @include lg {
+      place-items: center;
+    }
+  }
+  &---lg-item-start {
+    @include lg {
+      place-items: start;
+    }
+  }
+  &---lg-item-end {
+    @include lg {
+      place-items: end;
+    }
+  }
+  &---lg-textcenter {
+    @include lg {
+      text-align: center;
+    }
+  }
+  &---lg-space-between {
+    @include lg {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+$sizes: df, xxxxs, xxxs, xxs, xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl;
+
+@each $size in $sizes {
+  .gap---#{$size} {
+    @include gap($size);
+  }
+}
+@each $size in $sizes {
+  .gap---lg-#{$size} {
+    @include lg {
+      @include gap($size);
+    }
+  }
+}
+@each $size in $sizes {
+  .gap---mob-#{$size} {
+    @include mob {
+      @include gap($size);
+    }
+  }
+}

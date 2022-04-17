@@ -1,0 +1,29 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/style';
+@import 'base/grid';
+
+picture {
+  display: grid;
+  max-width: 100%;
+  * {
+    max-width: 100%;
+    height: initial;
+  }
+}
+.container {
+  max-width: 1246px;
+  margin: 0 auto;
+  width: 100%;
+}
+.no-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--color-black);
+  }
+}
