@@ -47,6 +47,9 @@
   &__cardContainer {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
+    @include mob {
+      grid-template-columns: initial;
+    }
   }
   &__load {
     opacity: 0;
