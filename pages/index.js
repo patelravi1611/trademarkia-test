@@ -64,7 +64,7 @@ export default class Home extends Component {
     this.searchRef.current.value = '';
     const res = await fetch(`https://rickandmortyapi.com/api/character`);
     const data = await res.json();
-    this.setState({data: data});
+    this.setState({data: data, showNoResult: false});
   }
   async search() {
     let searchQuery = this.searchRef.current.value;
