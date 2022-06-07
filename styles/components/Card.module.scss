@@ -1,8 +1,12 @@
+@import '../abstracts/mixins';
 .card {
     border: 1px solid var(--color-n-100);
     background-color: var(--color-n-25);
     border-radius: 12px;
     max-width: 300px;
+    @include mob {
+        max-width:100%;
+    }
     img {
         border-radius: 8px 8px 0 0;
     }
